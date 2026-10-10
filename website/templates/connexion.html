@@ -1,0 +1,52 @@
+
+
+	{% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block
+		content %}
+		<div class="main">  	
+			<input type="checkbox" id="chk" aria-hidden="true">
+			<div class="signup">
+		<form method="POST" type="sign" id="sign" name="sign">
+			<label for="chk" aria-hidden="true">S'enregistrer</label>
+			<input 
+					for="festivalier_email" 
+					id="festivalier_email"
+					type="email" 
+					name="festivalier_email" 
+					placeholder="Courriel" >
+			<input 
+					for="festivalier_prenom" 
+					type="text"
+					class="form-control"
+					id="festivalier_prenom"
+					name="festivalier_prenom"
+					placeholder="Prenom">
+			<input 
+					for="festivalier_name" 
+					type="text" 
+					id="festivalier_name"
+					name="festivalier_name"
+					placeholder="Nom">
+			<input
+					for="festivalier_password" 
+					id="festivalier_password"
+					name="festivalier_password"
+					type="password" 
+					placeholder="Mot de passe">
+
+
+
+		  <br />
+		  <button type="submit" class="btn btn-primary">Enregistrer</button>
+		</form>
+	</div>
+	
+	<div class="login">
+		<form method="POST" type="log" id="log" name="log">
+			<label for="chk" aria-hidden="true">Se connecter</label>
+			<input type="email" id="email" name="email" placeholder="Courriel" required="">
+			<input type="password" id="password" name="password" placeholder="Mot de passe" required="">
+			<button>Connexion</button>
+		</form>
+	</div>
+	</div>
+		{% endblock %}

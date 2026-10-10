@@ -6,15 +6,15 @@ body{
 	align-items: center;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-	background: linear-gradient(to bottom, #667efb, #627cfc, #637dff);
+	background: linear-gradient(to bottom, #24243e, #302b63, #24243e);
 }
 .main{
 	width: 30em;
-	height: 21em;
-	background: #1d39b6;
+	height: 35em;
+	background: #3f29ba;
 	overflow: hidden;
 	border-radius: 10px;
-	box-shadow: 5px 10px 25px #000;
+	box-shadow: 5px 20px 50px #000;
 }
 #chk{
 	display: none;
@@ -29,15 +29,15 @@ label{
 	font-size: 2em;
 	justify-content: center;
 	display: flex;
-	margin: 25px;
+	margin: 60px;
 	padding-top: 15px;
 	font-weight: bold;
 	cursor: pointer;
 	transition: .5s ease-in-out;
 }
-.main input {
+input {
 	width: 60%;
-	height: 30px;
+	height: 20px;
 	background: #e0dede;
 	justify-content: center;
 	display: flex;
@@ -47,14 +47,14 @@ label{
 	outline: none;
 	border-radius: 5px;
 }
-.main button{
-	width: 30%;
+button{
+	width: 60%;
 	height: 40px;
 	margin: 10px auto;
 	justify-content: center;
 	display: block;
 	color: #fff;
-	background: #1d39b6;
+	background: #3f29ba;
 	font-size: 1em;
 	font-weight: bold;
 	margin-top: 20px;
@@ -64,23 +64,23 @@ label{
 	transition: .2s ease-in;
 	cursor: pointer;
 }
-.main button:hover{
-	background: #001d9c;
+button:hover{
+	background: #270060;
 }
 .login{
-	height: 500px;
+	height: 600px;
 	background: #eee;
 	border-radius: 60% / 10%;
-	transform: translateY(-120px);
+	transform: translateY(-180px);
 	transition: .8s ease-in-out;
 }
 .login label{
-	color: #1d39b6;
+	color: #573b8a;
 	transform: scale(.6);
 }
 
 #chk:checked ~ .login{
-	transform: translateY(-300px);
+	transform: translateY(-550px);
 }
 #chk:checked ~ .login label{
 	transform: scale(1);	

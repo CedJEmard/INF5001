@@ -1,13 +1,18 @@
-body {
-  display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+	background: linear-gradient(to bottom, #24243e, #302b63, #24243e);
 }
+
 .calendar{
     color: #fff;
     margin: 10px auto;
-    background: #1d39b6;
+    background: #3f29ba;
     padding: 60px 40px 80px 40px;
     width: 95%;
     max-width: 800px;
@@ -176,8 +181,10 @@ body {
   .event-btn--cancel:hover{
     box-shadow: 0px 2px 4px rgba(2,2,2,0.2);
   }
-
-  
+  /* .add-event-btn:hover, .add.event-btn:focus{
+    background: #00258e;
+    box-shadow: 0px -1px 2px rgba(3,2,2,0.2);
+  } */
   .day-highlight .day-events-link{
     border-bottom: 2px solid #222;
     padding: 0;
@@ -209,7 +216,7 @@ body {
     font-size: 22px;
     font-family: 'Avenir', sans-serif;
     font-weight: 800;
-    color: #29ba59;
+    color: #3f29ba;
     border-bottom: 2px solid #222;
     cursor: pointer;
   }
@@ -346,7 +353,7 @@ body {
     
   }
   .cview--date:hover::before{
-    background: #4264ff;
+    background: #a898ff45;
   }
   .cview--date.today{
     color: #000;  

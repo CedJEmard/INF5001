@@ -1,0 +1,21 @@
+
+.evenement div{
+  padding: 100px 0 10 px;
+}
+
+  .evenement-du-jour a {
+    text-decoration: none;
+    color: #00171d;
+    padding: 5px 2px 5px;
+
+  }
+  .evenement-du-jour a:hover {
+    background: #53bdd846;
+    border-radius: 5px;
+  }
+  .evenement-du-jour a:visited {
+    background: #00171d;
+    border-radius: 5px;
+  }
+
+  

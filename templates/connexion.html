@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Louis De LEtoile Damour">
+    <meta name="author" content="">
+    <meta name="description" content="Connexion">
+
+  	<title>Enregistrement / Connexion</title>
+    <link rel="shortcut icon" href="">
+	<link rel="stylesheet" type="text/css" href="../static/css/connexion.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
+  	<link rel="stylesheet" type="text/css" href="../static/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="nav-menu">
+		<a href="index.html">Accueil</a></li>
+		<a class="active" href="connexion.html">Se connecter</a></li>
+		<a href="calendrier.html">Calendrier</a></li>
+		<form action="/query" method="get">
+		  <input id="search-bar"type="text" class="input-search" placeholder="Recherche...">
+		</form>
+	  </div>
+
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form>
+					<label for="chk" aria-hidden="true">S'enregistrer</label>
+					<input type="text" name="txt" placeholder="Prénom" required="">
+					<input type="text" name="txt" placeholder="Nom" required="">
+					<input type="email" name="email" placeholder="Courriel" required="">
+					<input type="password" name="pswd" placeholder="Mot de passe" required="">
+					<button>Enregister</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form>
+					<label for="chk" aria-hidden="true">Se connecter</label>
+					<input type="email" name="email" placeholder="Courriel" required="">
+					<input type="password" name="pswd" placeholder="Mot de passe" required="">
+					<button>Connexion</button>
+				</form>
+			</div>
+	</div>
+</body>
+</html>
+

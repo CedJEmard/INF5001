@@ -1,0 +1,52 @@
+.nav-menu {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	list-style-type: none;
+	padding-top: 10px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.nav-menu a,
+.nav-menu input {
+	width: 25%;
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 15px 0;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 18px;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+
+
+.nav-menu a:hover,
+.nav-menu input:hover{
+    transition: all 300ms ease-in-out;
+	background-color: #aa50ff75;
+}
+
+.nav-menu a.active {
+	background-color: #aa50ff75;
+}
+
+#search-bar {
+    margin: 0;
+    border-radius: 0;
+}
+
+.input-search {
+    border-style: none;
+    letter-spacing: 2px;
+    outline: none;
+    background-color: #24243e6f;
+    color:#fff;
+}
+
+.input-search::placeholder{
+    color:#fff;
+}

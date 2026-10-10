@@ -1,5 +1,3 @@
 flask
 Flask-SQLAlchemy
 flask-login
-requests
-flask_weasyprint

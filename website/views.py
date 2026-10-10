@@ -1,41 +1,39 @@
-from flask import Blueprint, render_template, request, flash, jsonify, redirect, url_for
+from flask import Blueprint, render_template, request, flash, jsonify
 from flask_login import login_required, current_user
+from .models import Note
 from . import db
 import json
-from .models import Evenement, Inscription
-
 
 views = Blueprint('views', __name__)
 
 
 @views.route('/', methods=['GET', 'POST'])
 def home():
-    evenements = Evenement.query.all()
-    return render_template("/no_co/programmation.html",
-                           user=current_user, evenements=evenements)
+    if request.method == 'POST': 
+        note = request.form.get('note')#Gets the note from the HTML 
 
+        if len(note) < 1:
+            flash('Note is too short!', category='error') 
+        else:
+            new_note = Note(data=note, user_id=current_user.id)  #providing the schema for the note 
+            db.session.add(new_note) #adding the note to the database 
+            db.session.commit()
+            flash('Note added!', category='success')
 
-# DEPRICATED
+    return render_template("home.html", user=current_user)
+
 @views.route('/calendrier', methods=['GET', 'POST'])
 def calendrier():
     return render_template("calendrier.html", user=current_user)
-# - - -
 
-
-@views.route('/home_co', methods=['GET', 'POST'])
-def home_co():
-    return redirect(url_for('event_festivalier.programmation_festivalier'))
-
-
-@views.route('/connectAdmin', methods=['GET', 'POST'])
-def connectAdmin():
-    return render_template("connectFest.html", user=current_user)
+@views.route('/connect', methods=['GET', 'POST'])
+def connect():
+    return render_template("connect.html", user=current_user)
 
 
 @views.route('/delete-note', methods=['POST'])
-def delete_note():
-    # this function expects a JSON from the INDEX.js file
-    note = json.loads(request.data)
+def delete_note():  
+    note = json.loads(request.data) # this function expects a JSON from the INDEX.js file 
     noteId = note['noteId']
     note = Note.query.get(noteId)
     if note:

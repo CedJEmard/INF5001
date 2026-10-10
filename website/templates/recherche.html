@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Louis De LEtoile Damour">
+    <meta name="description" content="Recherche">
+
+    <title>Recherche</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" type="text/css" href="../static/css/recherche.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="../static/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="nav-menu">
+    <a href="/">Accueil <i class="fa fa-home"></i></a>
+    <a href="/connexion">Se connecter <i class="fa fa-sign-in"></i></a>
+    <a href="/calendrier">Calendrier <i class="fa fa-calendar"></i></a>
+    <a class="active" href="recherche.html"><i class="fa fa-search"></i></a>
+    
+    
+  </div>
+  <button id="bouton-test" onclick="myFunction()"></button>
+    <div id="sans-resultat" class="search">
+        <form action="/query" method="get">
+          <button class="btn-search"><i class="fa fa-search"></i></button>
+          <input type="text" class="input-search" placeholder="Recherche...">
+        </form>
+    </div>
+
+    
+    <div id="reponse" >
+      <ul>
+        <li>.</li>
+        <li>.</li>
+        <li>.</li>
+        <li>Résultats</li>
+        <li>.</li>
+        <li>apparaissent</li>
+        <li>.</li>
+        <li>ici</li>
+        <li>.</li>
+        <li>sinon -> HIDDEN</li>
+        <li>.</li>
+        <li>.</li>
+        <li>.</li>
+      </ul>
+
+
+    </div>
+    <div id="bottom">
+      <div class="categorie">
+      <div class="search">
+        <form action="/categories" method="get">
+          <button id="special" class="btn-search icon"><i class="fa fa-list"></i></button>
+        </form>
+        <div class="description"><p>Recherche par catégories</p></div>
+        <div class="specific">
+          <form action="/musique" method="get">
+            <button class="btn-categorie">Musique</button>
+          </form>
+        </div>
+        <div class="specific">
+          <form action="/film" method="get">
+            <button class="btn-categorie">Film</button>
+          </form>
+        </div>
+      </div>
+      </div>
+      <div class="categorie">
+      <div class="search">
+        <form action="/date" method="get">
+          <button class="btn-search icon"><i class="fa fa-calendar"></i></button>
+        </form>
+        <div class="description"><p>Recherche par dates</p></div>
+        <div class="specific">
+          <form action="/aujourdhui" method="get">
+            <button class="btn-categorie">Aujourd'hui</button>
+          </form>
+        </div>
+        <div class="specific">
+            <form action="/semaine" method="get">
+            <button class="btn-categorie">Cette semaine</button>
+          </form>
+        </div>
+      </div>
+      </div>
+      <div class="categorie">
+      <div class="search">
+        <form action="/lieu" method="get">
+          <button class="btn-search icon"><i class="fa fa-map-pin"></i></button>
+        </form>
+        <div class="description"><p>Recherche par lieux</p></div>
+        <div class="specific">
+          <form action="/mlt" method="get">
+            <button class="btn-categorie">Montréal</button>
+          </form>
+        </div>
+        <div class="specific">
+          <form action="/qc" method="get">
+            <button class="btn-categorie">Québec</button>
+          </form>
+        </div>
+      </div>
+      </div>  
+    </div>   
+  
+
+    
+    <script src="../static/js/recherche.js"></script>
+</body>
+</html>
+

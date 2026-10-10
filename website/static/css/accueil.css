@@ -1,11 +1,12 @@
 body{
-	margin: 20% 0;
-	padding: 20;
+	margin: 0;
+	padding: 0;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-	background: linear-gradient(to bottom, #667efb, #627cfc, #637dff);
+	background: linear-gradient(to bottom, #24243e, #302b63, #24243e);
 }
 .main{
 	width: 350px;
@@ -16,6 +17,9 @@ body{
 	box-shadow: 5px 20px 50px #000;
 }
 
-
+.titre {
+	color: #fff;
+	font-size: xx-large;
+}
 
 
