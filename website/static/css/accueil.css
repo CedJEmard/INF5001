@@ -1,0 +1,21 @@
+body{
+	margin: 20% 0;
+	padding: 20;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+	background: linear-gradient(to bottom, #667efb, #627cfc, #637dff);
+}
+.main{
+	width: 350px;
+	height: 500px;
+	background: #260060a5;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+}
+
+
+
+

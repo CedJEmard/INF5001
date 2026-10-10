@@ -1,0 +1,72 @@
+{% extends "base_template/connectProd.html" %} {% block title %}Calendrier{% endblock %} {% block content  %}
+
+
+    <link rel="stylesheet" type="text/css" href="..\static\css\profileinfo.css">
+    <link href= https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css rel="stylesheet">
+    <link href= https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js rel="stylesheet">
+    <link href= https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js rel="stylesheet">
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
+    <script src='..\static\js\fr-ca.global.js'></script> 
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const calendarEl = document.getElementById('calendar')
+        const calendar = new FullCalendar.Calendar(calendarEl,  {
+            locale: 'fr',
+            initialView: 'dayGridMonth',
+            nowIndicator: true,
+            headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+            },
+            navLinks: true, // can click day/week names to navigate views
+            editable: true,
+            selectable: true,
+            selectMirror: true,
+            dayMaxEvents: true, // allow "more" link when too many events
+            events: [
+            {% for event in events%}
+             {
+               title: '{{event.name}}',
+               start: '{{event.date_debut}}',
+               end:      '{{event.date_fin}}',
+               // image_url:'{{event.image}}',
+            },
+             {% endfor %}
+             ], 
+                eventContent: function(arg) {
+                let arrayOfDomNodes = []
+                // title event
+                let titleEvent = document.createElement('div')
+                if(arg.event._def.title) {
+                  titleEvent.innerHTML = arg.event._def.title
+                  titleEvent.classList = "fc-event-title fc-sticky"
+                }
+    
+                // image event
+                let imgEventWrap = document.createElement('div')
+                if(arg.event.extendedProps.image_url) {
+                  let imgEvent = '<img src="'+arg.event.extendedProps.image_url+'" >'
+                  imgEventWrap.classList = "fc-event-img"
+                  imgEventWrap.innerHTML = imgEvent;
+                }
+    
+                arrayOfDomNodes = [ titleEvent,imgEventWrap ]
+    
+                return { domNodes: arrayOfDomNodes }
+              },
+            });
+            calendar.render();
+  });
+    </script>
+    
+  </head>
+  <body>
+
+
+    <div class="profile-container bg-white mt-5 mb-5">
+    <div class= "tester" id='calendar'></div>
+  </div>
+
+  {% endblock %}

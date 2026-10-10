@@ -1,0 +1,97 @@
+
+
+{% extends "base_template/connectProd.html" %} {% block title %}prod_profil_modif{% endblock %} {% block
+    content %}
+
+<link href= https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css rel="stylesheet">
+<link href= https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js rel="stylesheet">
+<link href= https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="..\static\css\navbar.css">
+<link rel="stylesheet" type="text/css" href="..\static\css\profileinfo.css">
+<link rel="stylesheet" type="text/css" href="../static/font-awesome-4.7.0/css/font-awesome.min.css">
+
+<script src="../static/js/profilemodif.js"></script>
+<body>
+
+
+
+
+<div class="profile-container bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+
+                <div class="preview">
+                    <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="profile-circle mt-5 responsive-image" id="preview-selected-image"  src="../static/img/defaultPicture.jpg" >
+                        <div class="choose-image">
+                            <p> Choisir une image </p> 
+                         <input class="hide-file" type="file" id="file-upload" accept="image/*" onchange="previewImage(event);" />
+                          </div>    
+                          <p>
+                         <span class="font-weight-bold"> {{user.name}} </span>
+                         <span class="text-black-50"> {{ user.email }} </span><span> </span>
+                          </p>
+                            
+                </div>
+            </div>
+            </div>
+        
+        <div class="col-md-5 border-right"> <form method="POST" type="modif_save_prod" id="modif_save_prod" name="modif_save_prod">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Paramètre de profile</h4>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Nom     </label><input type="text" class="form-control" id="modif_name" name="modif_name" value={{user.name}} placeholder="Entrez votre nom"></div>
+                    <div class="col-md-6"><label class="labels">NEQ</label> <input type="text" class="form-control" id="modif_neq" name="modif_neq" value={{user.NEQ}} placeholder="Entrez votre NEQ"></div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-12"><label class="labels">Description</label><input type="text" class="form-control" id="modif_description" name="modif_description" placeholder="Entrez votre description" value={{user.description}} ></div>
+                    <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control" id="modif_email" name="modif_email" placeholder="Entrez votre email" value="{{ user.email }}"></div>
+                
+                    <div class="col-md-12"><label class="labels">Mots de passe</label><input type="password" class="form-control" id="passwordInput" name="passwordInput" placeholder="Changer votre mot de passe (vide pour non changé)" ></div>
+                    <div class="col-md-12"><label class="labels">Reconfirmer mots de passe</label><input type="password" class="form-control" id="reconfirmInput" name="reconfirmInput" placeholder="Reconfirmer votre mot de passe (vide pour non changé)" ></div>
+                    <div class="col-md-12"><input type="checkbox" onclick="password()"> Montrer le password </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels">Telephone</label><input type="text" class="form-control" id="modif_telephone" name="modif_telephone" placeholder="Entrez votre téléphone" value="{{ user.telephone }}"></div>
+                    
+                </div>
+                <div class="mt-5 text-center"><button formaction="modif_save_prod" class="btn btn-primary profile-button" type="submit">Sauvegarder</button>
+                   
+                    <div class="error">  
+                
+                    
+                    {% if error %}
+                    <p class="error"><strong class="error">Error:</strong> {{ error }} 
+                    {% endif %}
+                    {% endblock %}
+                    </div>      
+                </div> 
+                
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center experience"><span> Vos intérêts d'événement </span><span class="border px-3 p-1 add-experience">
+                    <a class="event-button text-one-line" id="programmation.html" href="/programmation"> Voir les événements </a></span></div><br> 
+                <div class="col-md-12"><label class="labels">Catégorie d'intérêt #1</label><input type="text" class="form-control" placeholder="Entrez votre catégorie favorite" value="{{Catégorie_favorite}}"></div><br>
+                <div class="col-md-12"><label class="labels">Catégorie d'intérêt #2</label><input type="text" class="form-control" placeholder="Entrez votre deuxième catégorie favorite" value="{{Deuxième_favorite}}"></div>
+              
+            </div>
+        </div>
+    </form>
+   
+
+
+    </div>
+</div>
+</div>
+</div>
+</body>
+
+
+

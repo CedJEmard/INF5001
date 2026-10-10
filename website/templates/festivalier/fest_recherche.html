@@ -1,0 +1,39 @@
+
+{% extends "base_template/connectFest.html" %} {% block title %}Recherche{% endblock %} {% block
+  content %}
+   <link rel="stylesheet" type="text/css" href="../static/css/recherche.css">
+  
+    
+   
+   <div class="barre_recherche">
+    <form method="POST" type="recherche" id="recherche" name="recherche">
+      <div class="inner-form">
+        <div class="input-field first-wrap">
+          <div class="input-select">
+            <select id="categorie" name="categorie">
+              <option placeholder="">Catégorie</option>
+              <option>Musique</option>
+              <option>Sport</option>
+              <option>Humour</option>
+              <option>Festivals</option>
+              <option>Theatre</option>
+              <option>Divers</option>
+              <option>Nom</option>
+              <option>Ville</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-field second-wrap">
+          <input id="laRecherche"  type="text" name="laRecherche" placeholder="événement, lieu, catégorie.." />
+        </div>
+        <div class="input-field third-wrap">
+          <button class="btn-search" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+   
+      {% endblock %}
+

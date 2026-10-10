@@ -1,0 +1,70 @@
+
+{% extends "base_template/connectProd.html" %} {% block title %}prod_profil{% endblock %} {% block
+    content %}
+
+<link href= https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css rel="stylesheet">
+<link href= https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js rel="stylesheet">
+<link href= https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="..\static\css\navbar.css">
+<link rel="stylesheet" type="text/css" href="..\static\css\profileinfo.css">
+
+<body>
+<!-- Top navbar -->
+
+
+<div class="profile-container bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="profile-circle mt-5 responsive-image" src="../static/img/defaultPicture.jpg" >
+                <span class="font-weight-bold">{{user.name}}  </span><span class="text-black-50"> {{ user.email }}</span><span> </span></div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Paramètre de profile</h4>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Nom</label><p class="form-control"> {{user.name}} </p></div> 
+                    <div class="col-md-6"><label class="labels">NEQ</label><p class="form-control"> {{user.NEQ}} </p></div> 
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-12"><label class="labels">Description</label><p class="form-control"> {{ user.description }}</p></div> 
+                    <div class="col-md-12"><label class="labels">Email </label><p class="form-control"> {{ user.email }}</p></div>     
+                 
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels">Téléphone</label><p class="form-control"> {{ user.telephone }}</p></div> 
+                
+                </div>
+                <div class="mt-5 text-center"><a id="profil_modif_modif.html" href="/profil_prod_modif"><button class="btn btn-primary profile-button" type="button"> Modifier</button></a>
+                
+                    <div class="success">  
+                   
+                      
+                       
+                        {% if success %}
+                        <p class="success"><strong class="success">success:</strong> {{ success }} 
+                         {% endif %}
+                         {% endblock %}
+                    </div>   
+                
+                </div> 
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center experience"><span>Vos intérêts d'événement</span><span class="border px-3 p-1 add-experience">
+                    <a class="event-button text-one-line" id="programmation.html" href="/programmation"> Voir les événements </a></span></div><br> 
+                <div class="col-md-12"><label class="labels">Catégorie d'intérêt #1</label><p class="form-control"> {{ intérêt1 }}</p></div> 
+                <div class="col-md-12"><label class="labels">Catégorie d'intérêt #2</label><p class="form-control"> {{ intérêt2 }}</p></div>
+            </div>
+        </div>
+       
+       
+    </div>
+</div>
+
+</body>
+

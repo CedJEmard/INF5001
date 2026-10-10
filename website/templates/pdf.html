@@ -1,0 +1,24 @@
+
+    <h1>Mon horaire événementiel</h1>
+   
+{% if evenements%}
+{% for evenement in evenements %}
+<a href={{ url_for('event_in.un_event', id=evenement.id)}} >
+<div class="un-event">
+    <img src={{ evenement.image }} alt="event" class="w3-hover-opacity">
+    <div class="info-event">
+        <titre><b>{{ evenement.name }}</b></titre>  
+      <p style="display:inline-block;padding-left:20px;"> Du {{ evenement.date_debut }}</p><p style="display:inline-block;padding-left:20px;"> Au {{ evenement.date_fin }}</p>
+    </div>
+  </a>
+  </li>
+  </div>
+  {% endfor %}
+  {% else %}
+  
+      
+  <br><br><br><br><br><br><br><br>
+  <h1 class= "event-header" style="text-align:center">Aucun Événement, désolé</h1>
+  <br><br><br><br><br><br><br><br>   
+ 
+{% endif %}

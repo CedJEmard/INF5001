@@ -1,0 +1,211 @@
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Jost', sans-serif;
+	background: linear-gradient(to bottom, #667efb, #627cfc, #637dff);
+}
+
+.main{
+    width: 150%;
+    height: 9em;
+    background: #afbeff;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 5px 10px 25px #000;
+    line-height: 2;
+    position: relative;
+    transform: translateY(-153px);
+    font-size: 19px;
+    text-align: center;
+	vertical-align: middle;
+	margin: 0 auto;
+}
+.main p{
+	margin-top: 30px;
+}
+#chk{
+	display: none;
+}
+#chk2{
+	display: none;
+}
+#chk3{
+	display: none;
+}
+.signup{
+	position: relative;
+	width:100%;
+	height: 50%;
+}
+label{
+    color: #fff;
+    font-size: 2em;
+    justify-content: center;
+    display: flex;
+    margin: 10px;
+    margin-top: 50px;
+    padding-top: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+.ok{
+	margin-top: 20px;
+	background-color: #001d9c;
+	padding:5px 30px;
+	color: #e0dede;
+	border-color: #000;
+	border-width: 2px;
+	border-style: solid;
+}
+
+.main input {
+    width: 15em;
+    min-height: 30px;
+    background: #e0dede;
+    margin: 5px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    text-align: center;
+    display: block;
+}
+[class*="1"] {
+	
+	width: 30%;
+	height: 20px;
+	display: inline-block;
+	
+}
+[class*="description"] {
+	
+	width: 20em;
+	height: 100px;
+	display: flex;
+	
+}
+.titre{
+	width: 60%;
+	height: 20px;
+	display: flex;
+	margin: 15px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+.main button{
+	width: 30%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #1d39b6;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 40px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+.main button:hover{
+	background: #001d9c;
+}
+.adresse{
+    height: 700px;
+    width: 110%;
+    margin: -5%;
+    background: #eee;
+    border-radius: 70% / 10%;
+    transform: translateY(280px);
+    transition: .8s ease-in-out;
+    display: block;
+}
+.adresse label{
+	color: #1d39b6;
+	transform: scale(.6);
+}
+.mdp{
+	height: 500px;
+	background: #1d39b6;
+	border-radius: 70% / 10%;
+	transform: translateY(-635px);
+	transition: .8s ease-in-out;
+}
+.mdp label{
+	color: #ffffff;
+	transform: scale(.6);
+}
+#chk:checked ~ .adresse{
+	transform: translateY(-1000px);
+}
+#chk:checked .main{
+	transform: scale(2);
+}
+#chk2:checked ~ .adresse{
+	transform: translateY(-270px);
+}
+#chk3:checked ~ .adresse{
+	transform: translateY(280px);
+}
+#chk:checked ~ .mdp{
+	transform: translateY(-650px);
+}
+#chk2:checked ~ .mdp{
+	transform: translateY(-910px);
+}
+#chk3:checked ~ .mdp{
+	transform: translateY(-650px);
+}
+#chk:checked ~ .adresse label{
+	transform: scale(1);	
+}
+#chk2:checked ~ .mdp label{
+	transform: scale(1);	
+}
+#chk:checked ~ .signup label{
+	transform: scale(.6);
+}
+#chk2:checked ~ .signup label{
+	transform: scale(.6);
+}
+.nomEvent{
+    display: inline-block;
+    font-size: 15px;
+    margin:10px;
+}
+.facture p{
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0px 5px;
+    font-size: 13px;
+    opacity: 1;
+    font-size: 10px;
+    margin: 10px;
+}
+div.facture{
+    display: inline-block;
+    width: 100%;
+    font-weight: 500;
+}
+hr{
+    margin:2px;
+}
+.list{
+    max-height: 50px;
+}
+.carte{
+    display:block;
+}
+.adresse p{
+    padding-left:50px;
+    margin:26px;
+}

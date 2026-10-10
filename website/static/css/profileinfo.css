@@ -1,0 +1,142 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	background: linear-gradient(to bottom, #667efb, #667efb,#667efb);
+    font-family: 'Jost', sans-serif;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+#calendar {
+    height: 45em !important;
+}
+#calendar a {
+    height: 20px;
+}
+
+.profile-button {
+    background: rgb(28, 112, 207);
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #2c92ac
+}
+
+.profile-button:focus {
+    background: #000000;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #000000;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #000000;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #5087c5;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #000000
+}
+
+.event-button {
+    color: #000000;
+}
+
+.event-button:hover {
+    background: #5087c5;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type=file] {
+    background-color: #5087c5;
+    border: none;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .hide-file {
+    position: absolute;
+    z-index: 1000;
+    opacity: 0;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    height: 100%;
+    font-size: 24px;
+    width: 100%;
+}
+
+.choose-image{
+    padding:1px 5px;
+    background:#5087c5;
+    border:1px solid #00ad2d;
+    position:relative;
+    color:#fff;
+    border-radius:2px;
+    text-align:center;
+    float:left;
+    cursor:pointer
+  }
+
+.responsive-image{
+    max-width: 100%;
+    height: auto; 
+}
+
+.profile-circle{
+    border-radius: 250%;
+    background: #5087c500;
+    padding: 20px;
+    width: 600px;
+    height: 300px;
+}
+
+.profile-container{
+    width:80%;
+    height: 90vh;
+    margin: 10% auto;
+
+}
+
+.text-one-line{
+    text-overflow: ellipsis; 
+    overflow: hidden; 
+    white-space: nowrap;
+}
+
+.error{
+    color: red !important;
+}
+
+.success{
+    color:#00ad2d!important;
+}
+
+
+@media (min-width:576px){.profile-container{max-width:540px}}
+@media (min-width:768px){.profile-container{max-width:720px}}
+@media (min-width:992px){.profile-container{max-width:960px}}
+@media (min-width:1200px){.profile-container{max-width:1140px}}
+@media (min-width:1400px){.profile-container{max-width:1320px}}
